@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+<head  lang="uk">
+  <meta charset="utf-8">
+
+  <title>Пошук</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title-uk" content="Пошук" id="title-uk">
+  <meta name="title-en" content="Search" id="title-en">
+  <meta name="author" content="Данил Литвин">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="https://l2l.bar/Jj2m9R" type="image/x-icon">
+  
+</head>
+
+<body class="uk">
+
+<div class="nav">
+  
+  <a href="image.html" class="open-modal" text="imgsrch"></a>
+  <a href="#modal-ext" class="open-modal" text="extsrch"></a>
+
+</div>
+
+<div class="modal" id="modal-ext">
+  <div class="overlay">
+    <div class="content">
+      <div class="modal-header">
+        <h2 text="extsrch"></h3>
+      </div>
+      <div class="modal-body">
+        <form action="https://google.com/search" method="get">
+
+          <div class="grid">
+            
+            <h2 text="modal_header" class="commonHeader"></h2>
+            
+            <span class="text1" text="text1"></span>
+            <span class="text2" text="text2"></span>
+            <span class="text3" text="text3"></span>
+            <span class="text4" text="text4"></span>
+            
+            <div class="input1"><input type="text" name="as_q"></div>
+            <div class="input2" data-tip="Візьміть точні слова в лапки"><input type="text" name="as_epq"></div>
+            <div class="input3" data-tip="Введіть OR між усіма потрібними словами"><input type="text" name="as_oq"></div>
+            <div class="input4" data-tip="Поставте знак мінус перед небажаними словами"><input type="text" name="as_eq"></div>
+             
+          </div>
+          <div class="btn-ext"><input class="sub" type="submit" value=""></div>
+        </form>
+      </div>
+      <a href="#" class="close" onclick="removehash()">&times;</a>
+    </div>
+  </div>
+ </div>
+
+<div class="search-board">
+  <img class="google" id="google" src="img/google.svg" alt="icon">
+  <form action="https://google.com/search" method="get">
+    <div class="search">
+      <div class="search-container" id="search-container">
+        <input type="text" name="q" id="ipt" placeholder="Введіть запит" autocomplete="off" onclick="changeItem()" onmouseout="rechangeItem()" oninput="myFunction(event)">
+        <div id="clearButton" role="button" onclick="changeItem()" ></div>
+      </div>
+      <div class="buttons">
+        <button type="submit" name="btnK"></button> 
+        <button type="submit" name="btnI" text="luck"></button> 
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="lang">
+  <input id="lang" type='checkbox' onClick="changeLagnuage()">
+  <label for="lang" class="uk">UKR</label><label for="lang" class="eng">ENG</label>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
